@@ -1,5 +1,6 @@
 package com.pluralsight.candycoded;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,7 +45,13 @@ public class InfoActivity extends AppCompatActivity {
 
         }
     }
+public void createPhoneIntent(View view){
 
+Intent intent =  new Intent(Intent.ACTION_DIAL);
+Uri uri = Uri.parse("tel:0123456789");
+    intent.setData(uri);
+    startActivity(intent);
+}
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
